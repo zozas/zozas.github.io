@@ -7,7 +7,7 @@ window.addEventListener('load', function(){
 });
 // iTyped 
 window.ityped.init(document.querySelector('.iTyped'), {
-    strings: ['Information Technoogy', 'Programming', 'Source Code Quality', 'Business', 'Finance', 'SME', 'Banking', 'Teaching', 'Participating', 'Ukulele <3'],
+    strings: ['Information Technology', 'Programming', 'Source Code Quality', 'Business', 'Finance', 'SME', 'Banking', 'Investments', 'Teaching', 'Participating', 'Ukulele <3'],
     loop: true
 });
 
@@ -69,14 +69,6 @@ function updateNav(element)
         }
     }
 }
-
-document.querySelector('.hire-me').addEventListener('click', function(){
-    const sectionIndex = this.getAttribute('data-section-index');
-    addBackSectionClass(sectionIndex);
-    showSection(this);
-    updateNav(this);
-    removeBackSectionClass();
-});
 
 function showSection(element) 
 {
