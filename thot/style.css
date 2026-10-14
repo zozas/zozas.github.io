@@ -1,0 +1,260 @@
+/* ==========================================
+   THOT BOARD GAME - MAIN STYLESHEET
+   ========================================== */
+
+:root {
+    --bg-dark: #12100e;
+    --parchment-bg: #1c1815;
+    --parchment-card: #25201b;
+    --text-main: #e2d9cd;
+    --text-muted: #b0a394;
+    --accent-gold: #d4af37;
+    --accent-gold-hover: #f3d458;
+    --border-color: #4a3b2c;
+    
+    /* Card group colors matching printables */
+    --tinkering-cyan: #00bcd4;
+    --brewery-red: #e53935;
+    --herbalism-green: #2e7d32;
+    --poison-purple: #8e24aa;
+    --special-dark: #212121;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Georgia', serif, sans-serif;
+    line-height: 1.6;
+    padding: 0;
+}
+
+/* Header & Navigation */
+header {
+    background: var(--parchment-bg);
+    border-bottom: 2px solid var(--accent-gold);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-area h1 {
+    font-size: 1.8rem;
+    color: var(--accent-gold);
+    letter-spacing: 2px;
+}
+
+.logo-area p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: var(--accent-gold);
+    border-bottom: 1px solid var(--accent-gold);
+}
+
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(18,16,14,0.85), rgba(18,16,14,0.85)), url('assets/bg-texture.jpg') center/cover;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 800px;
+    margin: 0 auto 1.5rem auto;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: var(--accent-gold);
+    color: var(--bg-dark);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: var(--accent-gold-hover);
+}
+
+/* Cards Grid & Showcase */
+.section-title {
+    color: var(--accent-gold);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin: 2rem 0 1rem 0;
+    font-size: 1.5rem;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.card-box {
+    background: var(--parchment-card);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.card-box.tinkering { border-color: var(--tinkering-cyan); }
+.card-box.brewery { border-color: var(--brewery-red); }
+.card-box.herbalism { border-color: var(--herbalism-green); }
+.card-box.poison { border-color: var(--poison-purple); }
+.card-box.special { border-color: var(--accent-gold); }
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: var(--accent-gold);
+}
+
+.card-id {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.card-badge {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 3px;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.tinkering-badge { background: var(--tinkering-cyan); color: #000; }
+.brewery-badge { background: var(--brewery-red); color: #fff; }
+.herbalism-badge { background: var(--herbalism-green); color: #fff; }
+.poison-badge { background: var(--poison-purple); color: #fff; }
+.special-badge { background: var(--accent-gold); color: #000; }
+
+.card-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 0.75rem;
+}
+
+.card-effect {
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: var(--text-main);
+    border-top: 1px dashed var(--border-color);
+    padding-top: 0.5rem;
+}
+
+/* Downloads Section */
+.download-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.download-item {
+    background: var(--parchment-card);
+    border: 1px solid var(--border-color);
+    padding: 1.25rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.download-item h3 {
+    color: var(--accent-gold);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.download-item p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--parchment-bg);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 3rem;
+}
+
+/* Mobile Responsiveness */
+@media(max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    nav ul {
+        gap: 1rem;
+    }
+}

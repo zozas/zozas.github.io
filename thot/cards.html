@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Card Showcase - THOT Card Game</title>
+    <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+    <header>
+        <div class='logo-area'>
+            <h1>THOT</h1>
+            <p>Alchemical Card Showcase</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href='index.html'>Home</a></li>
+                <li><a href='rules.html'>Rules</a></li>
+                <li><a href='cards.html' class='active'>Card Showcase</a></li>
+                <li><a href='downloads.html'>Downloads</a></li>
+                <li><a href='contact.html'>Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class='container'>
+        <h2 class='section-title'>The 105 Alchemical Cards random showcase</h2>
+        <p style='margin-bottom: 2rem; color: var(--text-muted);'>
+            Every card represents a unique alchemical substance. Constructing effects requires combining 2 ingredient cards, with the exception of secret Special Cards.
+        </p>
+        <div class='grid-cards'>
+            <!-- Tinkering Group -->
+            <div class='card-box tinkering'>
+                <div class='card-header'>
+                    <h3 class='card-title'>Betony</h3>
+                    <span class='card-id'>#001</span>
+                </div>
+                <span class='card-badge tinkering-badge'>Tinkering / Defend</span>
+                <p class='card-desc'>Important medicinal herb of early medieval Great Britain.</p>
+                <center><img src='images/001.png' width=190 height=258></center>
+                <div class='card-effect'>Add +1 Defense Point</div>
+            </div>
+            <div class='card-box tinkering'>
+                <div class='card-header'>
+                    <h3 class='card-title'>Gillyweed</h3>
+                    <span class='card-id'>#011</span>
+                </div>
+                <span class='card-badge tinkering-badge'>Tinkering / Influence</span>
+                <p class='card-desc'>Slimy grayish-green leaf grown in waterbodies.</p>
+                <center><img src='images/011.png' width=190 height=258></center>
+                <div class='card-effect'>Take +1 card from deck</div>
+            </div>
+            <!-- Brewery Group -->
+            <div class='card-box brewery'>
+                <div class='card-header'>
+                    <h3 class='card-title'>Mushroom</h3>
+                    <span class='card-id'>#019</span>
+                </div>
+                <span class='card-badge brewery-badge'>Brewery / Cure</span>
+                <p class='card-desc'>Spore-producing part of a fungus with various properties.</p>
+                <center><img src='images/019.png' width=190 height=258></center>
+                <div class='card-effect'>Add +1 Health Point</div>
+            </div>
+            <div class='card-box brewery'>
+                <div class='card-header'>
+                    <h3 class='card-title'>Balm</h3>
+                    <span class='card-id'>#037</span>
+                </div>
+                <span class='card-badge brewery-badge'>Brewery / Speed</span>
+                <p class='card-desc'>Perennial herb with a lemony smell.</p>
+                <center><img src='images/037.png' width=190 height=258></center>
+                <div class='card-effect'>Play again immediately</div>
+            </div>
+            <!-- Herbalism Group -->
+            <div class='card-box herbalism'>
+                <div class='card-header'>
+                    <h3 class='card-title'>Lavender</h3>
+                    <span class='card-id'>#045</span>
+                </div>
+                <span class='card-badge herbalism-badge'>Herbalism / Sleep</span>
+                <p class='card-desc'>Purplish flower with calming fragrance.</p>
+                <center><img src='images/045.png' width=190 height=258></center>
+                <div class='card-effect'>Opponent loses next round</div>
+            </div>
+            <div class='card-box herbalism'>
+                <div class='card-header'>
+                    <h3 class='card-title'>Castor Oil</h3>
+                    <span class='card-id'>#053</span>
+                </div>
+                <span class='card-badge herbalism-badge'>Herbalism / Hypnotise</span>
+                <p class='card-desc'>Vegetable oil extracted from the castor bean.</p>
+                <center><img src='images/053.png' width=190 height=258></center>
+                <div class='card-effect'>Return random opponent card to deck</div>
+            </div>
+            <!-- Poison Group -->
+            <div class='card-box poison'>
+                <div class='card-header'>
+                    <h3 class='card-title'>Motherwort</h3>
+                    <span class='card-id'>#034</span>
+                </div>
+                <span class='card-badge poison-badge'>Poison / Harm</span>
+                <p class='card-desc'>Tall herbaceous perennial plant of the mint family.</p>
+                <center><img src='images/034.png' width=190 height=258></center>
+                <div class='card-effect'>Inflict damage (-1 Defense/HP)</div>
+            </div>
+            <div class='card-box poison'>
+                <div class='card-header'>
+                    <h3 class='card-title'>Asphodel</h3>
+                    <span class='card-id'>#021</span>
+                </div>
+                <span class='card-badge poison-badge'>Poison / Steal</span>
+                <p class='card-desc'>Lily family member often planted around tombs.</p>
+                <center><img src='images/021.png' width=190 height=258></center>
+                <div class='card-effect'>Steal random card from opponent</div>
+            </div>
+            <!-- Special Cards -->
+            <div class='card-box special'>
+                <div class='card-header'>
+                    <h3 class='card-title'>The Mirror</h3>
+                    <span class='card-id'>#100</span>
+                </div>
+                <span class='card-badge special-badge'>Special Trap</span>
+                <p class='card-desc'>Essential tool for all violent and heroic action (Virginia Woolf).</p>
+                <center><img src='images/100.png' width=190 height=258></center>
+                <div class='card-effect'>All effects returned to caster</div>
+            </div>
+            <div class='card-box special'>
+                <div class='card-header'>
+                    <h3 class='card-title'>The Void</h3>
+                    <span class='card-id'>#104</span>
+                </div>
+                <span class='card-badge special-badge'>Special Trap</span>
+                <p class='card-desc'>Nothing is void of God's work.</p>
+                <center><img src='images/104.png' width=190 height=258></center>
+                <div class='card-effect'>All effects halted & canceled</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2021-2026 THOT Card Game. Created by Zozas Ioannis. All rights reserved.</p>
+    </footer>
+</body>
+</html>
